@@ -18,17 +18,20 @@
             android:id="@+id/generename_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="38sp"
+            android:textSize="42sp"
             android:textColor="@color/yellow"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"/>
 
         <ImageView
             android:id="@+id/generephoto_imageview"
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:layout_below="@id/generename_textview"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/descriptiontitle_textview"
@@ -41,14 +44,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/yellow"
-            android:textSize="20sp"
-            android:layout_below="@id/descriptiontitle_textview"/>
+            android:textSize="16sp"
+            android:layout_below="@id/descriptiontitle_textview"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/playertitle_textview"
             style="@style/sectionDesctiptionStyle"
             android:text="Sample:"
-            android:layout_below="@id/description_textview"/>
+            android:layout_below="@id/description_textview"
+            />
 
         <!--odtwarzacz-->
 

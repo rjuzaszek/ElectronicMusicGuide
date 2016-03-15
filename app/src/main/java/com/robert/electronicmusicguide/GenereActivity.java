@@ -14,6 +14,7 @@ public class GenereActivity extends AppCompatActivity {
     TextView generename;
     ImageView image;
     TextView description;
+    String genere;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,12 @@ public class GenereActivity extends AppCompatActivity {
         setContentView(R.layout.activity_genere);
 
         Intent intent = getIntent();
-        String genere = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        genere = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         Typeface font = Typeface.createFromAsset(getAssets(), "Star_Jedi_Rounded.ttf");
 
         generename = (TextView) findViewById(R.id.generename_textview);
+        generename.setText(genere);
         generename.setTypeface(font);
         image = (ImageView) findViewById(R.id.generephoto_imageview);
         description = (TextView) findViewById(R.id.description_textview);
@@ -45,7 +47,7 @@ public class GenereActivity extends AppCompatActivity {
                 setup_dubstep();
                 break;
 
-            case "Drum and bass":
+            case "DNB":
                 setup_dnb();
                 break;
 
@@ -59,32 +61,27 @@ public class GenereActivity extends AppCompatActivity {
     }
 
     private void setup_house() {
-        generename.setText("House");
-        image.setImageDrawable(Drawable.createFromPath("@drawable/houseimage"));
-        description.setText("Opis");
+        image.setImageResource(R.drawable.houseimage);
+        description.setText(R.string.housedescription);
     }
 
     private void setup_techno() {
-        generename.setText("Techno");
-        image.setImageDrawable(Drawable.createFromPath("@drawable/technoimage"));
-        description.setText("Opis");
+        image.setImageResource(R.drawable.technoimage);
+        description.setText(R.string.technoscription);
     }
 
     private void setup_dnb() {
-        generename.setText("Drum and bass");
-        image.setImageDrawable(Drawable.createFromPath("@drawable/dnbimage"));
-        description.setText("Opis");
+        image.setImageResource(R.drawable.dnbimage);
+        description.setText(R.string.dnbdescription);
     }
 
     private void setup_dubstep() {
-        generename.setText("Dubstep");
-        image.setImageDrawable(Drawable.createFromPath("@drawable/dubstepimage"));
-        description.setText("Opis");
+        image.setImageResource(R.drawable.dubstepimage);
+        description.setText(R.string.dubstepscription);
     }
 
     private void setup_garage() {
-        generename.setText("Garage");
-        image.setImageDrawable(Drawable.createFromPath("@drawable/garageimage"));
-        description.setText("Opis");
+        image.setImageResource(R.drawable.garageimage);
+        description.setText(R.string.garagedescription);
     }
 }
