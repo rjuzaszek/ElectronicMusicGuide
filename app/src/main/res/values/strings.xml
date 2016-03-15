@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ElectronicMusicGuide</string>
+    <string name="title_text">Android Guide\nto\nElectronic Music</string>
+    <string name="house">House</string>
+    <string name="techno">Techno</string>
+    <string name="dubstep">Dubstep</string>
+    <string name="dnb">Drum and Bass</string>
+    <string name="garage">Garage</string>
 </resources>
