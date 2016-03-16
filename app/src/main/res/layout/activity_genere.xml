@@ -55,7 +55,14 @@
             android:layout_below="@id/description_textview"
             />
 
-        <!--odtwarzacz-->
+        <ImageButton
+            android:id="@+id/player_button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:onClick="onClick"
+            android:layout_below="@id/playertitle_textview"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/play"/>
 
     </RelativeLayout>
 </ScrollView>
