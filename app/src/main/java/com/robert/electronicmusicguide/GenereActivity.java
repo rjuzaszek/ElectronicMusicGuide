@@ -40,23 +40,23 @@ public class GenereActivity extends AppCompatActivity implements View.OnClickLis
 
         switch (genere) {
             case "House":
-                setup_house();
+                setup_genere(R.drawable.houseimage, R.string.housedescription, R.raw.housesound);
                 break;
 
             case "Techno":
-                setup_techno();
+                setup_genere(R.drawable.technoimage, R.string.technoscription, R.raw.technosound);
                 break;
 
             case "Dubstep":
-                setup_dubstep();
+                setup_genere(R.drawable.dubstepimage, R.string.dubstepscription, R.raw.dubstepsound);
                 break;
 
             case "DNB":
-                setup_dnb();
+                setup_genere(R.drawable.dnbimage, R.string.dnbdescription, R.raw.dnbsound);
                 break;
 
             case "Garage":
-                setup_garage();
+                setup_genere(R.drawable.garageimage, R.string.garagedescription, R.raw.garagesound);
                 break;
 
             default:
@@ -64,38 +64,10 @@ public class GenereActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    private void setup_house() {
-        image.setImageResource(R.drawable.houseimage);
-        description.setText(R.string.housedescription);
-        mediaPlayer = MediaPlayer.create(this, R.raw.housesound);
-        mediaPlayer.setLooping(true);
-    }
-
-    private void setup_techno() {
-        image.setImageResource(R.drawable.technoimage);
-        description.setText(R.string.technoscription);
-        mediaPlayer = MediaPlayer.create(this, R.raw.technosound);
-        mediaPlayer.setLooping(true);
-    }
-
-    private void setup_dnb() {
-        image.setImageResource(R.drawable.dnbimage);
-        description.setText(R.string.dnbdescription);
-        mediaPlayer = MediaPlayer.create(this, R.raw.dnbsound);
-        mediaPlayer.setLooping(true);
-    }
-
-    private void setup_dubstep() {
-        image.setImageResource(R.drawable.dubstepimage);
-        description.setText(R.string.dubstepscription);
-        mediaPlayer = MediaPlayer.create(this, R.raw.dubstepsound);
-        mediaPlayer.setLooping(true);
-    }
-
-    private void setup_garage() {
-        image.setImageResource(R.drawable.garageimage);
-        description.setText(R.string.garagedescription);
-        mediaPlayer = MediaPlayer.create(this, R.raw.garagesound);
+    private void setup_genere(int picture, int text, int sound) {
+        image.setImageResource(picture);
+        description.setText(text);
+        mediaPlayer = MediaPlayer.create(this, sound);
         mediaPlayer.setLooping(true);
     }
 
